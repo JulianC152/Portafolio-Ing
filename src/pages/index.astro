@@ -2,16 +2,67 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from "../components/Badge.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import QuickIcon from "../components/icons/QuickTime.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import SocialPhill from "../components/SocialPhill.astro";
+import Experience from "../components/Experience.astro";
+import ContainerSection from "../components/ContainerSection.astro";
+import Projects  from '../components/Projects.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-    <section class="w-full lg:w-[740px] mx-auto py-20">
-      <h1 class="text-white font-bold text-5xl flex flex-row gap-x-4 pb-4">Hey, soy Julian 
-        <div class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></div></h1>
-      <h2>Desarrollador de software con mas de 1 año de experiencia. De Popayán, Cauca. Especialista en
-        desarrollo de aplicaciones web.
+<Layout title="Portafolio de Julian - Desarrollador y Programador Web, Fronted y Backend con mas de 1 año de experiencia.">
+	<main class="px-6">
+    <ContainerSection class="pb-44">
+      <img src="/Images/Perfil.webp" alt="julian photo " class="rounded-full size-12">
+      <h1 class="text-white font-bold text-3xl lg:text-5xl md:text-4xl flex flex-row gap-x-3 pb-3">Hey, soy Julian 
+        <a href="https://www.linkedin.com/in/julian-andres-charfuelan-sanchez-a82647181/" class="flex justify-center items-center">
+            <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-pretty max-w-[700px]">
+        <span class=" bg-gradient-to-l from-violet-500 to-orange-300 text-transparent bg-clip-text"> 
+          Desarrollador de software con más de un año de experiencia 
+        </span> 
+          ubicado en 
+        <span class="bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-yellow-200 via-red-500 to-fuchsia-500 text-transparent bg-clip-text"> 
+          Popayán, Cauca.
+        </span> 
+        Mi especialización se enfoca en el desarrollo de aplicaciones web,
+        abarcando tanto el frontend como el backend. A lo largo de mi carrera, he trabajado con una variedad de tecnologías para 
+        crear soluciones web innovadoras y de alta calidad.
       </h2>
-    </section>
+      <nav class="flex gap-6 mt-5 flex-wrap">
+        <SocialPhill href="mailto:julianc416@gmail.com">
+          <MailIcon class="size-6"/>
+          Mail
+        </SocialPhill>
+        <SocialPhill  href="https://www.linkedin.com/in/julian-andres-charfuelan-sanchez-a82647181/">
+          <LinkedinIcon class="size-6 rounded-md "/>
+            LinkedIn
+        </SocialPhill>
+        <SocialPhill href="https://github.com/JulianC152">
+          <GitHub class="size-6"/>
+          GitHub
+        </SocialPhill>
+        
+    </ContainerSection>
+    <ContainerSection id="Experience" class="py-16 md:py-36">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+        <QuickIcon></QuickIcon>
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </ContainerSection>
+    <ContainerSection id="Proyectos">
+      <h2 class="text-3xl font-semibold mb-10 flex gap-x-2 items-center">
+        <CodeIcon></CodeIcon>
+        Proyectos
+      </h2>
+      <Projects />
+
+    </ContainerSection>
 	</main>
 </Layout>
