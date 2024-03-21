@@ -1,3 +1,29 @@
-<footer class="py-20">
-  Holaa
+---
+const currentYear = new Date().getFullYear()
+---
+
+<footer
+  class="bg-black rounded-full m-4 mt-16 w-full mx-auto lg:max-w md:max-w-2xl mb-10 flex justify-center"
+>
+  <div
+    class="lg:mx-5 w-full mx-auto md:flex md:items-center md:justify-between py-4 text-center"
+  >
+    <span class="text-sm sm:text-center text-white dark:text-white items-center justify-center"
+      >© {currentYear}
+      <a href="https://midu.dev/" class="hover:underline">Idea de Midudev</a>. Casi
+      todos los derechos reservados
+    </span>
+    <ul
+      class="flex flex-wrap items-center justify-center text-sm font-medium dark:text-white/50"
+    >
+      <li>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a id="contacto" href="mailto:julianc416@gmail.com" class="hover:underline"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
 </footer>
